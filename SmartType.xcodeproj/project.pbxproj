@@ -21,6 +21,8 @@
 		79F6B3812A0B207D0006CF12 /* Phrase+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B37F2A0B207D0006CF12 /* Phrase+CoreDataProperties.swift */; };
 		79F6B3852A0B214E0006CF12 /* PhraseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3842A0B214E0006CF12 /* PhraseListView.swift */; };
 		79F6B3872A0B22EB0006CF12 /* AddPhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3862A0B22EB0006CF12 /* AddPhraseView.swift */; };
+		79F6B3892A0B27EE0006CF12 /* PhraseFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3882A0B27EE0006CF12 /* PhraseFormView.swift */; };
+		79F6B38B2A0B28210006CF12 /* EditPhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B38A2A0B28210006CF12 /* EditPhraseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		79F6B37F2A0B207D0006CF12 /* Phrase+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Phrase+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		79F6B3842A0B214E0006CF12 /* PhraseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseListView.swift; sourceTree = "<group>"; };
 		79F6B3862A0B22EB0006CF12 /* AddPhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhraseView.swift; sourceTree = "<group>"; };
+		79F6B3882A0B27EE0006CF12 /* PhraseFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseFormView.swift; sourceTree = "<group>"; };
+		79F6B38A2A0B28210006CF12 /* EditPhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhraseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 				79F6B3142A0B01DD0006CF12 /* ContentView.swift */,
 				79F6B3842A0B214E0006CF12 /* PhraseListView.swift */,
 				79F6B3862A0B22EB0006CF12 /* AddPhraseView.swift */,
+				79F6B3882A0B27EE0006CF12 /* PhraseFormView.swift */,
+				79F6B38A2A0B28210006CF12 /* EditPhraseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,7 +303,9 @@
 				79F6B31C2A0B01DD0006CF12 /* Persistence.swift in Sources */,
 				79F6B3852A0B214E0006CF12 /* PhraseListView.swift in Sources */,
 				79F6B3872A0B22EB0006CF12 /* AddPhraseView.swift in Sources */,
+				79F6B3892A0B27EE0006CF12 /* PhraseFormView.swift in Sources */,
 				79F6B3422A0B02BD0006CF12 /* DataManager.swift in Sources */,
+				79F6B38B2A0B28210006CF12 /* EditPhraseView.swift in Sources */,
 				79F6B3812A0B207D0006CF12 /* Phrase+CoreDataProperties.swift in Sources */,
 				79F6B3802A0B207D0006CF12 /* Phrase+CoreDataClass.swift in Sources */,
 				79F6B3152A0B01DD0006CF12 /* ContentView.swift in Sources */,

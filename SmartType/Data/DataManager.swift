@@ -23,21 +23,27 @@ class DataManager: ObservableObject {
         newPhrase.label = label
         newPhrase.content = content
         newPhrase.createdAt = Date()
-
-        do {
-            try context.save()
-        } catch {
-            print("Error saving phrase: \(error)")
-        }
+        saveContext()
+    }
+    
+    func updatePhrase(_ phrase: Phrase, label: String, content: String) {
+        phrase.label = label
+        phrase.content = content
+        saveContext()
     }
 
     func deletePhrase(phrase: Phrase) {
         context.delete(phrase)
-
-        do {
-            try context.save()
-        } catch {
-            print("Error deleting phrase: \(error)")
+        saveContext()
+    }
+    
+    private func saveContext() {
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                print("Error saving phrase: \(error)")
+            }
         }
     }
 }

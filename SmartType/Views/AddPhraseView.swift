@@ -17,13 +17,7 @@ struct AddPhraseView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Form {
-                    Section {
-                        TextField("Label", text: $label)
-                            .autocapitalization(.words)
-                        TextField("Content", text: $content)
-                    }
-                }
+                PhraseFormView(label: $label, content: $content)
             }
             .navigationBarTitle("Add Phrase", displayMode: .inline)
             .navigationBarItems(
@@ -48,7 +42,6 @@ struct AddPhraseView: View {
         
         presentationMode.wrappedValue.dismiss()
     }
-    
 }
 
 struct AddPhraseView_Previews: PreviewProvider {

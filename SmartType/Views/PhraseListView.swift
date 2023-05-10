@@ -17,38 +17,42 @@ struct PhraseListView: View {
     private var phrases: FetchedResults<Phrase>
     
     @State var showingAddPhrase: Bool = false
+    @State var selectedPhrase: Phrase? = nil
     
     var body: some View {
-        List {
-            ForEach(phrases) { phrase in
-                NavigationLink {
-                    Text("Item at \(phrase.id.uuidString)")
-                } label: {
-                    VStack(alignment: .leading) {
-                        Text(phrase.label)
-                            .font(.headline)
-                        Text(phrase.content)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
+        NavigationStack {
+            List {
+                ForEach(phrases) { phrase in
+                    NavigationLink(value: phrase) {
+                        VStack(alignment: .leading) {
+                            Text(phrase.label)
+                                .font(.headline)
+                            Text(phrase.content)
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    .navigationDestination(for: Phrase.self, destination: { phrase in
+                        EditPhraseView(phrase: phrase)
+                    })
+                }
+                .onDelete(perform: deletePhrases)
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    EditButton()
+                }
+                ToolbarItem {
+                    Button(action: { showingAddPhrase.toggle() }) {
+                        Label("Add Phrase", systemImage: "plus")
                     }
                 }
             }
-            .onDelete(perform: deletePhrases)
-        }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                EditButton()
+            .sheet(isPresented: $showingAddPhrase) {
+                AddPhraseView()
             }
-            ToolbarItem {
-                Button(action: { showingAddPhrase.toggle() }) {
-                    Label("Add Phrase", systemImage: "plus")
-                }
-            }
+            .navigationTitle("All Phrases")
         }
-        .sheet(isPresented: $showingAddPhrase) {
-            AddPhraseView()
-        }
-        .navigationTitle("All Phrases")
     }
     
     private func deletePhrases(offsets: IndexSet) {
@@ -58,8 +62,8 @@ struct PhraseListView: View {
     }
 }
 
-struct PhraseListView_Previews: PreviewProvider {
-    static var previews: some View {
-        PhraseListView()
-    }
-}
+//struct PhraseListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PhraseListView()
+//    }
+//}
