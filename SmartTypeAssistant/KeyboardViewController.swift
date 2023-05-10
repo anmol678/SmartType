@@ -8,9 +8,7 @@
 import UIKit
 
 class KeyboardViewController: UIInputViewController {
-
-    @IBOutlet var nextKeyboardButton: UIButton!
-    
+        
     private var collectionView: UICollectionView!
     private var phrases: [Phrase] = []
     
@@ -27,29 +25,48 @@ class KeyboardViewController: UIInputViewController {
         fetchPhrases()
 
         // Set up UICollectionView
+        setupCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let heightContraint = NSLayoutConstraint(
+            item: view!,
+            attribute: .height,
+            relatedBy: .equal,
+            toItem: nil,
+            attribute: .notAnAttribute,
+            multiplier: 1.0,
+            constant: 216.0)
+        view.addConstraint(heightContraint)
+    }
+    
+    func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
-
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "phraseCell")
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-
-        // Customize your collectionView appearance here
-        collectionView.backgroundColor = .clear
-
-        self.view.addSubview(collectionView)
-
-        collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-        collectionView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "PhraseCell")
+        
+        view.addSubview(collectionView)
+        
+        // Set up constraints for the collection view
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
     }
-    
+
     override func textWillChange(_ textInput: UITextInput?) {
         // The app is about to change the document's contents. Perform any preparation here.
     }
@@ -77,22 +94,24 @@ extension KeyboardViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "phraseCell", for: indexPath)
-
-        // Customize your cell appearance here
-        let label = UILabel()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhraseCell", for: indexPath)
+        cell.contentView.backgroundColor = .systemGray
+        cell.contentView.layer.cornerRadius = 10.0
+        cell.contentView.clipsToBounds = true
+        
+        let label = UILabel(frame: cell.contentView.bounds)
         label.text = phrases[indexPath.item].content
-        label.frame = cell.contentView.bounds
         label.textAlignment = .center
-
+        label.textColor = .white
+        
         cell.contentView.addSubview(label)
-
+        
         return cell
     }
 }
 
 extension KeyboardViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: 50)
+        return CGSize(width: (collectionView.bounds.width - 40) / 3, height: 40)
     }
 }
