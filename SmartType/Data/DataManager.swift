@@ -16,6 +16,18 @@ class DataManager: ObservableObject {
         self.persistenceController = persistenceController
         self.context = persistenceController.container.viewContext
     }
+    
+    public func getAllPhrases() -> [Phrase] {
+        let fetchRequest: NSFetchRequest<Phrase> = Phrase.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Phrase.createdAt, ascending: false)]
+
+        do {
+            return try context.fetch(fetchRequest)
+        } catch {
+            print("Failed to fetch phrases: \(error)")
+            return []
+        }
+    }
 
     func createPhrase(label: String, content: String) {
         let newPhrase = Phrase(context: context)

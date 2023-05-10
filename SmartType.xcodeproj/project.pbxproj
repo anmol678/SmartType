@@ -23,6 +23,13 @@
 		79F6B3872A0B22EB0006CF12 /* AddPhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3862A0B22EB0006CF12 /* AddPhraseView.swift */; };
 		79F6B3892A0B27EE0006CF12 /* PhraseFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3882A0B27EE0006CF12 /* PhraseFormView.swift */; };
 		79F6B38B2A0B28210006CF12 /* EditPhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B38A2A0B28210006CF12 /* EditPhraseView.swift */; };
+		79F6B3932A0B2DBE0006CF12 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3922A0B2DBE0006CF12 /* KeyboardViewController.swift */; };
+		79F6B3972A0B2DBE0006CF12 /* SmartTypeAssistant.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 79F6B3902A0B2DBE0006CF12 /* SmartTypeAssistant.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		79F6B39C2A0B2E010006CF12 /* SmartType.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B31D2A0B01DD0006CF12 /* SmartType.xcdatamodeld */; };
+		79F6B39D2A0B2E060006CF12 /* Phrase+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B37E2A0B207D0006CF12 /* Phrase+CoreDataClass.swift */; };
+		79F6B39E2A0B2E060006CF12 /* Phrase+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B37F2A0B207D0006CF12 /* Phrase+CoreDataProperties.swift */; };
+		79F6B39F2A0B34200006CF12 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B31B2A0B01DD0006CF12 /* Persistence.swift */; };
+		79F6B3A02A0B34280006CF12 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3412A0B02BD0006CF12 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +47,28 @@
 			remoteGlobalIDString = 79F6B30E2A0B01DD0006CF12;
 			remoteInfo = SmartType;
 		};
+		79F6B3952A0B2DBE0006CF12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79F6B3072A0B01DD0006CF12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79F6B38F2A0B2DBE0006CF12;
+			remoteInfo = SmartTypeAssistant;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		79F6B39B2A0B2DBE0006CF12 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				79F6B3972A0B2DBE0006CF12 /* SmartTypeAssistant.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		79F6B30F2A0B01DD0006CF12 /* SmartType.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartType.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +90,11 @@
 		79F6B3862A0B22EB0006CF12 /* AddPhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhraseView.swift; sourceTree = "<group>"; };
 		79F6B3882A0B27EE0006CF12 /* PhraseFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseFormView.swift; sourceTree = "<group>"; };
 		79F6B38A2A0B28210006CF12 /* EditPhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhraseView.swift; sourceTree = "<group>"; };
+		79F6B3902A0B2DBE0006CF12 /* SmartTypeAssistant.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SmartTypeAssistant.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F6B3922A0B2DBE0006CF12 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		79F6B3942A0B2DBE0006CF12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79F6B3A12A0B37010006CF12 /* SmartType.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartType.entitlements; sourceTree = "<group>"; };
+		79F6B3A22A0B371A0006CF12 /* SmartTypeAssistant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartTypeAssistant.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +119,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79F6B38D2A0B2DBE0006CF12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,6 +135,7 @@
 				79F6B3112A0B01DD0006CF12 /* SmartType */,
 				79F6B3272A0B01DD0006CF12 /* SmartTypeTests */,
 				79F6B3312A0B01DD0006CF12 /* SmartTypeUITests */,
+				79F6B3912A0B2DBE0006CF12 /* SmartTypeAssistant */,
 				79F6B3102A0B01DD0006CF12 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +146,7 @@
 				79F6B30F2A0B01DD0006CF12 /* SmartType.app */,
 				79F6B3242A0B01DD0006CF12 /* SmartTypeTests.xctest */,
 				79F6B32E2A0B01DD0006CF12 /* SmartTypeUITests.xctest */,
+				79F6B3902A0B2DBE0006CF12 /* SmartTypeAssistant.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +154,7 @@
 		79F6B3112A0B01DD0006CF12 /* SmartType */ = {
 			isa = PBXGroup;
 			children = (
+				79F6B3A12A0B37010006CF12 /* SmartType.entitlements */,
 				79F6B3822A0B20DB0006CF12 /* Data */,
 				79F6B3832A0B20E90006CF12 /* Views */,
 				79F6B3122A0B01DD0006CF12 /* SmartTypeApp.swift */,
@@ -170,6 +213,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		79F6B3912A0B2DBE0006CF12 /* SmartTypeAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				79F6B3A22A0B371A0006CF12 /* SmartTypeAssistant.entitlements */,
+				79F6B3922A0B2DBE0006CF12 /* KeyboardViewController.swift */,
+				79F6B3942A0B2DBE0006CF12 /* Info.plist */,
+			);
+			path = SmartTypeAssistant;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,10 +233,12 @@
 				79F6B30B2A0B01DD0006CF12 /* Sources */,
 				79F6B30C2A0B01DD0006CF12 /* Frameworks */,
 				79F6B30D2A0B01DD0006CF12 /* Resources */,
+				79F6B39B2A0B2DBE0006CF12 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				79F6B3962A0B2DBE0006CF12 /* PBXTargetDependency */,
 			);
 			name = SmartType;
 			productName = SmartType;
@@ -226,6 +281,23 @@
 			productReference = 79F6B32E2A0B01DD0006CF12 /* SmartTypeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		79F6B38F2A0B2DBE0006CF12 /* SmartTypeAssistant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79F6B3982A0B2DBE0006CF12 /* Build configuration list for PBXNativeTarget "SmartTypeAssistant" */;
+			buildPhases = (
+				79F6B38C2A0B2DBE0006CF12 /* Sources */,
+				79F6B38D2A0B2DBE0006CF12 /* Frameworks */,
+				79F6B38E2A0B2DBE0006CF12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartTypeAssistant;
+			productName = SmartTypeAssistant;
+			productReference = 79F6B3902A0B2DBE0006CF12 /* SmartTypeAssistant.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -247,6 +319,9 @@
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = 79F6B30E2A0B01DD0006CF12;
 					};
+					79F6B38F2A0B2DBE0006CF12 = {
+						CreatedOnToolsVersion = 14.3;
+					};
 				};
 			};
 			buildConfigurationList = 79F6B30A2A0B01DD0006CF12 /* Build configuration list for PBXProject "SmartType" */;
@@ -265,6 +340,7 @@
 				79F6B30E2A0B01DD0006CF12 /* SmartType */,
 				79F6B3232A0B01DD0006CF12 /* SmartTypeTests */,
 				79F6B32D2A0B01DD0006CF12 /* SmartTypeUITests */,
+				79F6B38F2A0B2DBE0006CF12 /* SmartTypeAssistant */,
 			);
 		};
 /* End PBXProject section */
@@ -287,6 +363,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		79F6B32C2A0B01DD0006CF12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F6B38E2A0B2DBE0006CF12 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,6 +414,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79F6B38C2A0B2DBE0006CF12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F6B39E2A0B2E060006CF12 /* Phrase+CoreDataProperties.swift in Sources */,
+				79F6B3A02A0B34280006CF12 /* DataManager.swift in Sources */,
+				79F6B3932A0B2DBE0006CF12 /* KeyboardViewController.swift in Sources */,
+				79F6B39C2A0B2E010006CF12 /* SmartType.xcdatamodeld in Sources */,
+				79F6B39D2A0B2E060006CF12 /* Phrase+CoreDataClass.swift in Sources */,
+				79F6B39F2A0B34200006CF12 /* Persistence.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -343,6 +439,11 @@
 			isa = PBXTargetDependency;
 			target = 79F6B30E2A0B01DD0006CF12 /* SmartType */;
 			targetProxy = 79F6B32F2A0B01DD0006CF12 /* PBXContainerItemProxy */;
+		};
+		79F6B3962A0B2DBE0006CF12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79F6B38F2A0B2DBE0006CF12 /* SmartTypeAssistant */;
+			targetProxy = 79F6B3952A0B2DBE0006CF12 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -464,8 +565,10 @@
 		79F6B3392A0B01DD0006CF12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SmartType/SmartType.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SmartType/Preview Content\"";
@@ -493,8 +596,10 @@
 		79F6B33A2A0B01DD0006CF12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SmartType/SmartType.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SmartType/Preview Content\"";
@@ -595,6 +700,58 @@
 			};
 			name = Release;
 		};
+		79F6B3992A0B2DBE0006CF12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SmartTypeAssistant/SmartTypeAssistant.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QA6B2J6365;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartTypeAssistant/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SmartTypeAssistant;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stabb.SmartType.SmartTypeAssistant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		79F6B39A2A0B2DBE0006CF12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SmartTypeAssistant/SmartTypeAssistant.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QA6B2J6365;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartTypeAssistant/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SmartTypeAssistant;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stabb.SmartType.SmartTypeAssistant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -630,6 +787,15 @@
 			buildConfigurations = (
 				79F6B33F2A0B01DD0006CF12 /* Debug */,
 				79F6B3402A0B01DD0006CF12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79F6B3982A0B2DBE0006CF12 /* Build configuration list for PBXNativeTarget "SmartTypeAssistant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79F6B3992A0B2DBE0006CF12 /* Debug */,
+				79F6B39A2A0B2DBE0006CF12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
