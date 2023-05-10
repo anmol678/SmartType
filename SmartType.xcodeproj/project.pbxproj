@@ -16,6 +16,11 @@
 		79F6B3292A0B01DD0006CF12 /* SmartTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3282A0B01DD0006CF12 /* SmartTypeTests.swift */; };
 		79F6B3332A0B01DD0006CF12 /* SmartTypeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3322A0B01DD0006CF12 /* SmartTypeUITests.swift */; };
 		79F6B3352A0B01DD0006CF12 /* SmartTypeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3342A0B01DD0006CF12 /* SmartTypeUITestsLaunchTests.swift */; };
+		79F6B3422A0B02BD0006CF12 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3412A0B02BD0006CF12 /* DataManager.swift */; };
+		79F6B3802A0B207D0006CF12 /* Phrase+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B37E2A0B207D0006CF12 /* Phrase+CoreDataClass.swift */; };
+		79F6B3812A0B207D0006CF12 /* Phrase+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B37F2A0B207D0006CF12 /* Phrase+CoreDataProperties.swift */; };
+		79F6B3852A0B214E0006CF12 /* PhraseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3842A0B214E0006CF12 /* PhraseListView.swift */; };
+		79F6B3872A0B22EB0006CF12 /* AddPhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3862A0B22EB0006CF12 /* AddPhraseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,11 @@
 		79F6B32E2A0B01DD0006CF12 /* SmartTypeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartTypeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F6B3322A0B01DD0006CF12 /* SmartTypeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTypeUITests.swift; sourceTree = "<group>"; };
 		79F6B3342A0B01DD0006CF12 /* SmartTypeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTypeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		79F6B3412A0B02BD0006CF12 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		79F6B37E2A0B207D0006CF12 /* Phrase+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Phrase+CoreDataClass.swift"; sourceTree = "<group>"; };
+		79F6B37F2A0B207D0006CF12 /* Phrase+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Phrase+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		79F6B3842A0B214E0006CF12 /* PhraseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseListView.swift; sourceTree = "<group>"; };
+		79F6B3862A0B22EB0006CF12 /* AddPhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhraseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +108,10 @@
 		79F6B3112A0B01DD0006CF12 /* SmartType */ = {
 			isa = PBXGroup;
 			children = (
+				79F6B3822A0B20DB0006CF12 /* Data */,
+				79F6B3832A0B20E90006CF12 /* Views */,
 				79F6B3122A0B01DD0006CF12 /* SmartTypeApp.swift */,
-				79F6B3142A0B01DD0006CF12 /* ContentView.swift */,
 				79F6B3162A0B01DD0006CF12 /* Assets.xcassets */,
-				79F6B31B2A0B01DD0006CF12 /* Persistence.swift */,
-				79F6B31D2A0B01DD0006CF12 /* SmartType.xcdatamodeld */,
 				79F6B3182A0B01DD0006CF12 /* Preview Content */,
 			);
 			path = SmartType;
@@ -131,6 +140,28 @@
 				79F6B3342A0B01DD0006CF12 /* SmartTypeUITestsLaunchTests.swift */,
 			);
 			path = SmartTypeUITests;
+			sourceTree = "<group>";
+		};
+		79F6B3822A0B20DB0006CF12 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				79F6B3412A0B02BD0006CF12 /* DataManager.swift */,
+				79F6B31B2A0B01DD0006CF12 /* Persistence.swift */,
+				79F6B31D2A0B01DD0006CF12 /* SmartType.xcdatamodeld */,
+				79F6B37E2A0B207D0006CF12 /* Phrase+CoreDataClass.swift */,
+				79F6B37F2A0B207D0006CF12 /* Phrase+CoreDataProperties.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		79F6B3832A0B20E90006CF12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				79F6B3142A0B01DD0006CF12 /* ContentView.swift */,
+				79F6B3842A0B214E0006CF12 /* PhraseListView.swift */,
+				79F6B3862A0B22EB0006CF12 /* AddPhraseView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +295,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				79F6B31C2A0B01DD0006CF12 /* Persistence.swift in Sources */,
+				79F6B3852A0B214E0006CF12 /* PhraseListView.swift in Sources */,
+				79F6B3872A0B22EB0006CF12 /* AddPhraseView.swift in Sources */,
+				79F6B3422A0B02BD0006CF12 /* DataManager.swift in Sources */,
+				79F6B3812A0B207D0006CF12 /* Phrase+CoreDataProperties.swift in Sources */,
+				79F6B3802A0B207D0006CF12 /* Phrase+CoreDataClass.swift in Sources */,
 				79F6B3152A0B01DD0006CF12 /* ContentView.swift in Sources */,
 				79F6B3132A0B01DD0006CF12 /* SmartTypeApp.swift in Sources */,
 				79F6B31F2A0B01DD0006CF12 /* SmartType.xcdatamodeld in Sources */,
