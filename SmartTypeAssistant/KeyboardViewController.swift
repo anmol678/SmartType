@@ -6,6 +6,14 @@
 //
 
 import UIKit
+import SwiftUI
+
+struct PhraseView: View {
+    var phrases: [Phrase]
+    var body: some View {
+        TagView(data: phrases.map({ $0.content }))
+    }
+}
 
 class KeyboardViewController: UIInputViewController {
         
@@ -25,7 +33,23 @@ class KeyboardViewController: UIInputViewController {
         fetchPhrases()
 
         // Set up UICollectionView
-        setupCollectionView()
+//        setupCollectionView()
+        
+        let controller = UIHostingController(rootView: PhraseView(phrases: phrases))
+        addChild(controller)
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(controller.view)
+        
+        NSLayoutConstraint.activate([
+            controller.view.topAnchor.constraint(equalTo: view.topAnchor),
+            controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            controller.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            controller.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        
+        controller.view.backgroundColor = .clear
+        
+        controller.didMove(toParent: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
