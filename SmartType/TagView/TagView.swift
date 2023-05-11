@@ -10,31 +10,31 @@ import SwiftUI
 fileprivate struct TagView: View {
     @Environment(\.colorScheme) var colorScheme
     
-    var text: String
+    var phrase: Phrase
+    var onTap: (Phrase) -> Void
     
     var body: some View {
-        Text(verbatim: text)
-            .padding(8)
-            .background(
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(colorScheme == .dark ?
-                          Color.gray.opacity(0.5) : Color.white)
-                    .compositingGroup()
-                    .shadow(color: Color.black.opacity(0.3), radius: 1, x: 0, y: 1)
-            )
-    }
-}
-
-struct TagView_Previews: PreviewProvider {
-    static var previews: some View {
-        TagView(text: "text this dhk")
-            .frame(width: 100, height: 40)
+        Button {
+            onTap(phrase)
+        } label: {
+            Text(verbatim: phrase.content)
+                .foregroundColor(Color(.label))
+                .padding(8)
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(colorScheme == .dark ?
+                              Color.gray.opacity(0.5) : Color.white)
+                        .compositingGroup()
+                        .shadow(color: Color.black.opacity(0.3), radius: 1, x: 0, y: 1)
+                )
+        }
     }
 }
 
 struct FlexibleTagView: View {
     
-    var data: [String]
+    var data: [Phrase]
+    var onTap: (Phrase) -> Void
     
     var body: some View {
         ScrollView {
@@ -42,10 +42,10 @@ struct FlexibleTagView: View {
                 data: data,
                 spacing: 8,
                 alignment: .leading
-            ) { item in
-                TagView(text: item)
+            ) { phrase in
+                TagView(phrase: phrase, onTap: onTap)
             }
-            .padding(.horizontal, 16)
+            .padding(.horizontal, 12)
             .padding(.top, 16)
         }
     }
