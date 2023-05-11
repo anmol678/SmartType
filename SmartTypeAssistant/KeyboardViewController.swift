@@ -11,7 +11,7 @@ import SwiftUI
 struct PhraseView: View {
     var phrases: [Phrase]
     var body: some View {
-        TagView(data: phrases.map({ $0.content }))
+        FlexibleTagView(data: phrases.map({ $0.content }))
     }
 }
 
@@ -38,6 +38,9 @@ class KeyboardViewController: UIInputViewController {
         let controller = UIHostingController(rootView: PhraseView(phrases: phrases))
         addChild(controller)
         controller.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        controller.view.backgroundColor = .clear
+        
         view.addSubview(controller.view)
         
         NSLayoutConstraint.activate([
@@ -46,8 +49,6 @@ class KeyboardViewController: UIInputViewController {
             controller.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             controller.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
-        
-        controller.view.backgroundColor = .clear
         
         controller.didMove(toParent: self)
     }

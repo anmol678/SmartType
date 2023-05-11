@@ -7,7 +7,32 @@
 
 import SwiftUI
 
-struct TagView: View {
+fileprivate struct TagView: View {
+    @Environment(\.colorScheme) var colorScheme
+    
+    var text: String
+    
+    var body: some View {
+        Text(verbatim: text)
+            .padding(8)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(colorScheme == .dark ?
+                          Color.gray.opacity(0.5) : Color.white)
+                    .compositingGroup()
+                    .shadow(color: Color.black.opacity(0.3), radius: 1, x: 0, y: 1)
+            )
+    }
+}
+
+struct TagView_Previews: PreviewProvider {
+    static var previews: some View {
+        TagView(text: "text this dhk")
+            .frame(width: 100, height: 40)
+    }
+}
+
+struct FlexibleTagView: View {
     
     var data: [String]
     
@@ -18,12 +43,7 @@ struct TagView: View {
                 spacing: 8,
                 alignment: .leading
             ) { item in
-                Text(verbatim: item)
-                    .padding(8)
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                            .fill(Color.gray.opacity(0.4))
-                    )
+                TagView(text: item)
             }
             .padding(.horizontal, 16)
             .padding(.top, 16)
