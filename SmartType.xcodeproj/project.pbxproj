@@ -8,12 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		79B304202A0CBED20016EE32 /* SizeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3041F2A0CBED20016EE32 /* SizeReader.swift */; };
-		79B304222A0CBEEE0016EE32 /* _FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B304212A0CBEEE0016EE32 /* _FlexibleView.swift */; };
 		79B304242A0CBF050016EE32 /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B304232A0CBF050016EE32 /* FlexibleView.swift */; };
 		79B304262A0CBF770016EE32 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B304252A0CBF770016EE32 /* TagView.swift */; };
 		79B3042B2A0CC2F80016EE32 /* SizeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3041F2A0CBED20016EE32 /* SizeReader.swift */; };
 		79B3042C2A0CC2F80016EE32 /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B304232A0CBF050016EE32 /* FlexibleView.swift */; };
-		79B3042D2A0CC2F80016EE32 /* _FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B304212A0CBEEE0016EE32 /* _FlexibleView.swift */; };
 		79B3042E2A0CC2F80016EE32 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B304252A0CBF770016EE32 /* TagView.swift */; };
 		79F6B3132A0B01DD0006CF12 /* SmartTypeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3122A0B01DD0006CF12 /* SmartTypeApp.swift */; };
 		79F6B3152A0B01DD0006CF12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6B3142A0B01DD0006CF12 /* ContentView.swift */; };
@@ -80,7 +78,6 @@
 
 /* Begin PBXFileReference section */
 		79B3041F2A0CBED20016EE32 /* SizeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeReader.swift; sourceTree = "<group>"; };
-		79B304212A0CBEEE0016EE32 /* _FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FlexibleView.swift; sourceTree = "<group>"; };
 		79B304232A0CBF050016EE32 /* FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
 		79B304252A0CBF770016EE32 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		79F6B30F2A0B01DD0006CF12 /* SmartType.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartType.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				79B3041F2A0CBED20016EE32 /* SizeReader.swift */,
-				79B304212A0CBEEE0016EE32 /* _FlexibleView.swift */,
 				79B304232A0CBF050016EE32 /* FlexibleView.swift */,
 				79B304252A0CBF770016EE32 /* TagView.swift */,
 			);
@@ -409,7 +405,6 @@
 			files = (
 				79F6B31C2A0B01DD0006CF12 /* Persistence.swift in Sources */,
 				79F6B3852A0B214E0006CF12 /* PhraseListView.swift in Sources */,
-				79B304222A0CBEEE0016EE32 /* _FlexibleView.swift in Sources */,
 				79F6B3872A0B22EB0006CF12 /* AddPhraseView.swift in Sources */,
 				79F6B3892A0B27EE0006CF12 /* PhraseFormView.swift in Sources */,
 				79B304242A0CBF050016EE32 /* FlexibleView.swift in Sources */,
@@ -451,7 +446,6 @@
 				79F6B3A02A0B34280006CF12 /* DataManager.swift in Sources */,
 				79F6B3932A0B2DBE0006CF12 /* KeyboardViewController.swift in Sources */,
 				79B3042C2A0CC2F80016EE32 /* FlexibleView.swift in Sources */,
-				79B3042D2A0CC2F80016EE32 /* _FlexibleView.swift in Sources */,
 				79F6B39C2A0B2E010006CF12 /* SmartType.xcdatamodeld in Sources */,
 				79B3042B2A0CC2F80016EE32 /* SizeReader.swift in Sources */,
 				79F6B39D2A0B2E060006CF12 /* Phrase+CoreDataClass.swift in Sources */,
