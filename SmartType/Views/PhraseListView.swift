@@ -40,9 +40,6 @@ struct PhraseListView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
                     Button(action: { showingAddPhrase.toggle() }) {
                         Label("Add Phrase", systemImage: "plus")
                     }
@@ -51,7 +48,7 @@ struct PhraseListView: View {
             .sheet(isPresented: $showingAddPhrase) {
                 AddPhraseView()
             }
-            .navigationTitle("All Phrases")
+            .navigationTitle("Phrases")
         }
     }
     

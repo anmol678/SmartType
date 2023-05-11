@@ -28,12 +28,10 @@ struct EditPhraseView: View {
         }
         .navigationBarTitle("Edit Phrase", displayMode: .inline)
         .navigationBarItems(
-            leading: Button("Cancel") {
-                presentationMode.wrappedValue.dismiss()
-            },
-            trailing: Button("Done") {
+            trailing: Button("Save") {
                 updatePhrase()
             }
+            .disabled(label == phrase.label && content == phrase.content)
         )
     }
     

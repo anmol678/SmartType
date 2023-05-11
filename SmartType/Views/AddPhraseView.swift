@@ -14,10 +14,15 @@ struct AddPhraseView: View {
     @State private var label: String = ""
     @State private var content: String = ""
     
+    @FocusState private var labelFocus: Bool
+    
     var body: some View {
         NavigationView {
             VStack {
-                PhraseFormView(label: $label, content: $content)
+                PhraseFormView(label: $label, content: $content, labelFocus: _labelFocus)
+            }
+            .onAppear() {
+                labelFocus = true
             }
             .navigationBarTitle("Add Phrase", displayMode: .inline)
             .navigationBarItems(
@@ -27,6 +32,7 @@ struct AddPhraseView: View {
                 trailing: Button("Done") {
                     addPhrase()
                 }
+                .disabled(label.isEmpty || content.isEmpty)
             )
         }
     }
