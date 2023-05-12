@@ -25,7 +25,7 @@ fileprivate struct TagView: View {
                         .fill(colorScheme == .dark ?
                               Color.gray.opacity(0.5) : Color.white)
                         .compositingGroup()
-                        .shadow(color: Color.black.opacity(0.3), radius: 1, x: 0, y: 1)
+                        .shadow(color: Color.black.opacity(0.3), radius: 0, x: 0.1, y: 1.1)
                 )
         }
     }
@@ -41,11 +41,11 @@ struct FlexibleTagView: View {
             FlexibleView(
                 data: data,
                 spacing: 8,
-                alignment: .leading
+                alignment: .center
             ) { phrase in
                 TagView(phrase: phrase, onTap: onTap)
             }
-            .padding(.horizontal, 12)
+            .padding(.horizontal, 16)
             .padding(.top, 16)
         }
     }
