@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7900FC8D2A0DF2ED0009EC3A /* CYRKeyboardButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7900FC892A0DF2ED0009EC3A /* CYRKeyboardButton.m */; };
+		7900FC8F2A0DF2ED0009EC3A /* CYRKeyboardButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7900FC8B2A0DF2ED0009EC3A /* CYRKeyboardButtonView.m */; };
+		7900FC912A0DF2ED0009EC3A /* TurtleBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7900FC8C2A0DF2ED0009EC3A /* TurtleBezierPath.m */; };
+		7900FC942A0DF30D0009EC3A /* ExampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7900FC932A0DF30D0009EC3A /* ExampleVC.swift */; };
+		7900FC972A0DF3EA0009EC3A /* SwiftUIExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7900FC962A0DF3EA0009EC3A /* SwiftUIExample.swift */; };
 		79B304202A0CBED20016EE32 /* SizeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3041F2A0CBED20016EE32 /* SizeReader.swift */; };
 		79B304242A0CBF050016EE32 /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B304232A0CBF050016EE32 /* FlexibleView.swift */; };
 		79B304262A0CBF770016EE32 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B304252A0CBF770016EE32 /* TagView.swift */; };
@@ -77,6 +82,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7900FC852A0DF2ED0009EC3A /* SmartType-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartType-Bridging-Header.h"; sourceTree = "<group>"; };
+		7900FC862A0DF2ED0009EC3A /* SmartTypeAssistant-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartTypeAssistant-Bridging-Header.h"; sourceTree = "<group>"; };
+		7900FC872A0DF2ED0009EC3A /* CYRKeyboardButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRKeyboardButtonView.h; sourceTree = "<group>"; };
+		7900FC882A0DF2ED0009EC3A /* TurtleBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleBezierPath.h; sourceTree = "<group>"; };
+		7900FC892A0DF2ED0009EC3A /* CYRKeyboardButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRKeyboardButton.m; sourceTree = "<group>"; };
+		7900FC8A2A0DF2ED0009EC3A /* CYRKeyboardButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRKeyboardButton.h; sourceTree = "<group>"; };
+		7900FC8B2A0DF2ED0009EC3A /* CYRKeyboardButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRKeyboardButtonView.m; sourceTree = "<group>"; };
+		7900FC8C2A0DF2ED0009EC3A /* TurtleBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleBezierPath.m; sourceTree = "<group>"; };
+		7900FC932A0DF30D0009EC3A /* ExampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleVC.swift; sourceTree = "<group>"; };
+		7900FC962A0DF3EA0009EC3A /* SwiftUIExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExample.swift; sourceTree = "<group>"; };
 		79B3041F2A0CBED20016EE32 /* SizeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeReader.swift; sourceTree = "<group>"; };
 		79B304232A0CBF050016EE32 /* FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
 		79B304252A0CBF770016EE32 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
@@ -138,6 +153,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7900FC842A0DF2C90009EC3A /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7900FC8A2A0DF2ED0009EC3A /* CYRKeyboardButton.h */,
+				7900FC892A0DF2ED0009EC3A /* CYRKeyboardButton.m */,
+				7900FC872A0DF2ED0009EC3A /* CYRKeyboardButtonView.h */,
+				7900FC8B2A0DF2ED0009EC3A /* CYRKeyboardButtonView.m */,
+				7900FC882A0DF2ED0009EC3A /* TurtleBezierPath.h */,
+				7900FC8C2A0DF2ED0009EC3A /* TurtleBezierPath.m */,
+				7900FC852A0DF2ED0009EC3A /* SmartType-Bridging-Header.h */,
+				7900FC862A0DF2ED0009EC3A /* SmartTypeAssistant-Bridging-Header.h */,
+				7900FC932A0DF30D0009EC3A /* ExampleVC.swift */,
+				7900FC962A0DF3EA0009EC3A /* SwiftUIExample.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
 		79B3041E2A0CBEBB0016EE32 /* TagView */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +205,7 @@
 		79F6B3112A0B01DD0006CF12 /* SmartType */ = {
 			isa = PBXGroup;
 			children = (
+				7900FC842A0DF2C90009EC3A /* Keyboard */,
 				79B3041E2A0CBEBB0016EE32 /* TagView */,
 				79F6B3A12A0B37010006CF12 /* SmartType.entitlements */,
 				79F6B3822A0B20DB0006CF12 /* Data */,
@@ -330,6 +363,7 @@
 				TargetAttributes = {
 					79F6B30E2A0B01DD0006CF12 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 					79F6B3232A0B01DD0006CF12 = {
 						CreatedOnToolsVersion = 14.3;
@@ -341,6 +375,7 @@
 					};
 					79F6B38F2A0B2DBE0006CF12 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -405,12 +440,17 @@
 			files = (
 				79F6B31C2A0B01DD0006CF12 /* Persistence.swift in Sources */,
 				79F6B3852A0B214E0006CF12 /* PhraseListView.swift in Sources */,
+				7900FC972A0DF3EA0009EC3A /* SwiftUIExample.swift in Sources */,
 				79F6B3872A0B22EB0006CF12 /* AddPhraseView.swift in Sources */,
+				7900FC942A0DF30D0009EC3A /* ExampleVC.swift in Sources */,
+				7900FC8D2A0DF2ED0009EC3A /* CYRKeyboardButton.m in Sources */,
 				79F6B3892A0B27EE0006CF12 /* PhraseFormView.swift in Sources */,
 				79B304242A0CBF050016EE32 /* FlexibleView.swift in Sources */,
 				79F6B3422A0B02BD0006CF12 /* DataManager.swift in Sources */,
 				79B304202A0CBED20016EE32 /* SizeReader.swift in Sources */,
+				7900FC8F2A0DF2ED0009EC3A /* CYRKeyboardButtonView.m in Sources */,
 				79F6B38B2A0B28210006CF12 /* EditPhraseView.swift in Sources */,
+				7900FC912A0DF2ED0009EC3A /* TurtleBezierPath.m in Sources */,
 				79F6B3812A0B207D0006CF12 /* Phrase+CoreDataProperties.swift in Sources */,
 				79F6B3802A0B207D0006CF12 /* Phrase+CoreDataClass.swift in Sources */,
 				79B304262A0CBF770016EE32 /* TagView.swift in Sources */,
@@ -594,6 +634,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SmartType/SmartType.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -614,6 +655,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.stabb.SmartType;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartType/Keyboard/SmartType-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -625,6 +668,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SmartType/SmartType.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -645,6 +689,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.stabb.SmartType;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartType/Keyboard/SmartType-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -729,6 +774,7 @@
 		79F6B3992A0B2DBE0006CF12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SmartTypeAssistant/SmartTypeAssistant.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -747,6 +793,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartType/Keyboard/SmartTypeAssistant-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -755,6 +803,7 @@
 		79F6B39A2A0B2DBE0006CF12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SmartTypeAssistant/SmartTypeAssistant.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -773,6 +822,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartType/Keyboard/SmartTypeAssistant-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

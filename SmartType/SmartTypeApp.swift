@@ -20,3 +20,15 @@ struct SmartTypeApp: App {
         }
     }
 }
+
+//@main
+//struct SmartTypeApp: App {
+//    @StateObject var sharedTextView = SharedTextView()
+//
+//    var body: some Scene {
+//        WindowGroup {
+//            ExampleView()
+//                .environmentObject(sharedTextView)
+//        }
+//    }
+//}
